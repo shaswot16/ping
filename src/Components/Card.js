@@ -3,6 +3,7 @@ import "./Card.css"
 
 function Card() {
     const [isIntersecting, setIsIntersecting] = useState(false);
+
     const ref = useRef(null);
 
     useEffect(() => {
@@ -12,6 +13,8 @@ function Card() {
             },
             { rootMargin: "-300px" }
         );
+
+      
         console.log(isIntersecting);
         observer.observe(ref.current);
 
@@ -38,6 +41,8 @@ function Card() {
                 <main ref={ref}>
                     <div className="child-one">Card 1</div>
                     <div className="child-two">Card 2</div>
+                    <div className="child-three">Card 3</div>
+
                 </main>
                 
             </div>

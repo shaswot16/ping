@@ -24,13 +24,17 @@ main div {
 }
 
 
-main div:first-child {
+main div:nth-child(1) {
     transform: translateX(-150%);
     opacity: 0;
 }
 
-main div:last-child {
-    transform: translateX(150%);
+main div:nth-child(2) {
+    transform: translateY(150%);
+    opacity: 0;
+}
+main div:nth-child(3) {
+    transform: translateX(10%);
     opacity: 0;
 }
 

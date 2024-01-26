@@ -1,3 +1,42 @@
-.footer {
-    height:1000px;
+
+.footerContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px; /* Adjust the gap as needed */
+    padding: 20px;
+    border: 1px solid #ddd; /* Border color and width */
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px; /* Adjust margin as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow (adjust values as needed) */
+  }
+
+.socialMedia{
+    grid-column: 1/4;
+    border-style: solid;
+    margin-left: 25%;
+    margin-right: 25%;
+    position:relative;
+    bottom: 35px;
+
 }
+
+
+.footerContainer > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  form {
+    display: flex;
+    gap: 10px; /* Adjust the gap as needed */
+    align-items: center;
+  }
+
+  @media (max-width: 600px) {
+    .footerContainer {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
