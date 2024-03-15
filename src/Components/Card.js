@@ -11,7 +11,7 @@ function Card() {
             ([entry]) => {
                 setIsIntersecting(entry.isIntersecting);
             },
-            { rootMargin: "-300px" }
+            { rootMargin: "-100px" }
         );
 
       
