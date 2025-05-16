@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './Components/Navbar';
-import Body from './Components/Body'
-import Footer from './Components/Footer';
-import Card from './Components/Card';
+// import './App.css';
+import MainPage from './Components/General/MainPage'
+import Footer from './Components/General/Footer';
+import NavBar from './Components/General/Navbar';
+import ProductList from './Components/Product/ProductList';
+import ProductDetail from './Components/Product/ProductDetail';
+import Offers from './Components/Product/Offer';
+import ProductListWithFilters from './Components/Product/ProductListFilter';
+
 import Contact from './Components/Contact';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import ReactDOM from "react-dom/client";
+
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        {/* <Navbar /> */}
+        {/* <NavBar /> */}
         <Routes>
-          <Route path="/" element={<> <Body /><Card /><Footer /></>}></Route>
-          <Route path="contact" element={<Contact />} ></Route>
+          <Route path="/" element={
+            <>
+              <MainPage />
+              <Offers />
+              <Footer />
+            </>
+          } />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/products" element={<ProductList />} />
+          <Route path="/products/:id" element={<ProductDetail />} />
+          <Route path="/offers" element={<Offers />} />
+          <Route path="/filter" element={<ProductListWithFilters />} />
         </Routes>
-      </BrowserRouter >
+        </BrowserRouter>
     </>
   );
 }
